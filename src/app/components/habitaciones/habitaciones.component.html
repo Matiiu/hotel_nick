@@ -1,0 +1,40 @@
+<main>
+  <div class="container">
+    <h1>Habitaciones</h1>
+    <section *ngFor="let habitacion of habitaciones">
+      <div class="layout">
+        <figure>
+          <img
+            src="{{ habitacion.fotos }}"
+            alt="imagen/habitacion"
+            loading="lazy"
+            width="500"
+            height="500"
+          />
+       </figure>
+
+       <div class="descripcion">
+        <header>
+        <h3>{{ habitacion.nombre }}</h3>
+      </header>
+
+      <section>
+        <p class="id"> <strong>Id de Habitación:</strong> {{ habitacion._id }} </p>
+        <strong>Descripción:</strong>
+        <p class="desc-habitacion"> &nbsp;{{ habitacion.descripcion }}</p>
+        <p class="nPersonas"> <strong>Número de personas permitidas:</strong> {{ habitacion.numMaximoPersonas }} </p>
+        <p  class="precio">  <strong>Precio:</strong> ${{ habitacion.valorNoche }}.00</p>
+
+      </section>
+
+
+        <footer>
+
+           <a class="button" routerLink="/reservas">Rervar</a>
+        </footer>
+       </div>
+
+      </div>
+    </section>
+  </div>
+</main>

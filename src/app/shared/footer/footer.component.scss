@@ -1,0 +1,54 @@
+@use '/src/scss/base/variables' as v;
+@use '/src/scss/base/mixins' as m;
+
+footer {
+  background-color: v.$primaryColor;
+  margin-top: 5rem;
+  padding-block: 5%;
+}
+
+.layout {
+  section, address {
+    margin-top: 3rem
+  }
+
+  text-align: center;
+
+  @include m.phone {
+    @include m.grid(2, 1rem);
+    text-align: start;
+
+    section {
+      margin-top: 3rem;
+    }
+    address {
+      margin-top:0
+    }
+  }
+
+  @include m.tablet {
+    @include m.grid(4, 1rem);
+    text-align: start;
+
+    section, address {
+      margin-top: 0;
+    }
+  h4 {
+    margin-bottom: 1rem;
+  }
+  .redes {
+    h4 {
+      margin-left: 10%;
+    }
+    img {
+      cursor: pointer;
+      margin-right: 1.2rem;
+    }
+  }
+
+  }
+
+}
+
+
+

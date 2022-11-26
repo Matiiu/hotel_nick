@@ -1,0 +1,26 @@
+
+h1 {
+  text-align: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  padding: 2rem 3rem;
+
+  legend {
+    font-size: 1.6rem;
+  }
+
+  input, label {
+    font-size: 1.6rem;
+    border-radius: 1rem;
+
+  }
+}
+
+
+button {
+  margin-top: 2rem;
+}

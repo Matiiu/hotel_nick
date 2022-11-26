@@ -1,0 +1,18 @@
+<header [class]="this.banner ? 'banner' : '' " [ngClass]="showMenu && banner ? 'opacity' : '' ">
+  <div class="container">
+
+      <h1> <a routerLink="home">Hotel nick</a> </h1>
+
+
+    <figure (click)="toogleTag()">
+      <img src="../../../assets/img/barras.svg" alt="Icono Menu Responsive">
+    </figure>
+
+    <nav [ngClass]="showMenu ? 'show-menu' : '' ">
+      <li routerLinkActive="active"> <a class="link" routerLink="home">Home</a> </li>
+      <li routerLinkActive="active"> <a class="link" routerLink="habitaciones">Habitaciones</a> </li>
+      <li routerLinkActive="active"> <a class="link" routerLink="reservas">Reserva</a> </li>
+    </nav>
+
+  </div>
+</header>

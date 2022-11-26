@@ -1,0 +1,35 @@
+<main>
+  <div class="container">
+    <h1>Menu</h1>
+    <section>
+        <figure *ngFor="let plato of platos" >
+          <img
+            src="../../../assets/img/restaurante{{plato}}.jpg"
+            alt="Imagen/Menu"
+            loading="lazy"
+            (click)="openModal()"
+            (click)="saveValor(plato)"
+          />
+        </figure>
+    </section>
+
+    <dialog >
+      <div>
+      <span class="return" (click)="returnPhoto()"> < </span>
+        <figure (click)="closeModal()">
+      <!-- <span class="close" (click)="closeModal()"> X </span> -->
+          <img
+            src="../../../assets/img/restaurante{{valor}}.jpg"
+            alt="Imagen/Modal"
+            loading="lazy"
+          />
+        </figure>
+      <span class="next" (click)="nextPhoto()"> > </span>
+
+      </div>
+    </dialog>
+
+
+
+  </div>
+</main>

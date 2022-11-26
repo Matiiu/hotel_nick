@@ -1,0 +1,64 @@
+@use '/src/scss/base/variables' as v;
+@use '/src/scss/base/mixins' as m;
+
+main {
+  margin-bottom: 7rem;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+ .layout {
+    display: grid;
+    @include m.grid(2, 1rem);
+
+
+    figure {
+      padding: 1rem;
+
+    }
+
+ }
+
+}
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom: .1rem solid rgb(218, 213, 213);
+
+  strong {
+    font-size: 1.6rem;
+   }
+
+  header {
+    h3 {
+      text-align: center;
+   }
+  }
+
+   section {
+    margin-bottom: 2rem;
+
+    p {
+      margin-bottom: 3rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+    }
+
+
+
+
+
+
+      span {
+        font-weight: bold;
+      }
+   }
+}

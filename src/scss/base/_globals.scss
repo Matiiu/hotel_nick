@@ -1,0 +1,142 @@
+
+@use 'variables' as v;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.4rem;
+  line-height: 2;
+  font-family: v.$textFont;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ol, ul, figure, div {
+  margin: 0;
+  padding: 0;
+  font-family: v.$textFont;
+}
+
+
+h1 {
+  font-size: 5rem;
+  font-family: v.$titleFont;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-family: v.$titleFont;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+  letter-spacing: .1rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+address {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+  color: #ffffffff;
+
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffffff;
+}
+
+img {
+  max-width: 100%
+}
+
+.container {
+  width: min(95%, 125rem);
+  margin: 0 auto;
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: .35rem;
+    bottom: 0;
+    left: 0;
+    background-color: #6e10cc;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: transform .25s ease-out;
+  }
+
+  &:hover:after {
+    transform: scalex(.8);
+    transform-origin: bottom left;
+  }
+}
+
+.active {
+  a {
+    color: rgba(240, 236, 236, 0.568) !important;
+    font-weight: lighter !important;
+    text-shadow: none !important;
+
+  }
+}
+
+.button {
+  margin-left: 45%;
+  box-shadow: 0px 0px 3px 0px v.$secundaryColor;
+  background:linear-gradient(to bottom, #84d9c1 5%, #1ca67f 100%);
+  background-color:#84d9c1;
+  border-radius:28px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size: 1.8rem;
+  letter-spacing: .3rem;
+  font-weight:bold;
+  padding: .3rem 5rem;
+  text-decoration:none;
+  text-shadow:0px 1px 50px v.$secundaryColor;
+  transition: .7s;
+
+&:hover {
+    background:linear-gradient(to bottom, #1ca67f 5%, #84d9c1 100%);
+    background-color:v.$secundaryColor;
+    letter-spacing: .7rem;
+  }
+
+&:active {
+  position:relative;
+  top:1px;
+}
+}
+

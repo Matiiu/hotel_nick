@@ -1,0 +1,77 @@
+@use '/src/scss/base/variables' as v;
+@use '/src/scss/base/mixins' as m;
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  nav {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity 0.5s linear, heigth .5s linear;
+
+    li {
+      display: block;
+      text-align: center;
+
+      a {
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 1.75rem;
+        letter-spacing: .2rem;
+        text-shadow: .1rem .1rem .1rem rgb(30, 29, 29);
+
+      }
+    }
+
+  }
+
+  @include m.tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      opacity: 1;
+      visibility: visible;
+      gap: 2rem;
+
+     
+
+    }
+
+  }
+}
+
+figure {
+  @include m.tablet {
+    display: none;
+  }
+
+  img {
+    width: 5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
+.show-menu {
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
